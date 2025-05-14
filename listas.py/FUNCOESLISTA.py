@@ -279,6 +279,7 @@ diferenca = conjunto_a - conjunto_b
 # Exibição dos resultados
 print("Conjunto A:", conjunto_a)
 
+#treinando comits git hub
 
 # Conjuntos de exemplo
 a = {1, 2, 3, 4}
