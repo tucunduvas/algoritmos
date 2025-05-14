@@ -3,7 +3,6 @@ num = int(input("Digite um número: "))
 anterior = 0
 proximo = 1
 atual = 1
-fibonacci = [0,1,1]
 
 #()reversed
 for i in range(num-1,-1,-1):
