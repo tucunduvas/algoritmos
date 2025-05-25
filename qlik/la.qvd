@@ -1,0 +1,67 @@
+Transacoes: //apelidando a tabela 
+LOAD
+    Cliente,
+    Agrupamento,
+    Setor as Divisoes_de_Setores,
+    Parcelamento as Parcelas, // apelidando campos
+    Vendedor_id,
+    Data,
+    Dia,
+    Mês,
+    Trimestre,
+    Semestre,
+    Ano,
+    Valor
+FROM [lib://p_files/011 - Criando Conexões com Pastas de Dados/Exemplo.xlsx]
+(ooxml, embedded labels, table is Vendas);
+
+
+Transacoes: 
+LOAD
+    Cliente,
+    Agrupamento,
+    Setor,
+    Parcelamento,
+    Vendedor_id,
+    Data,
+    Dia,
+    Mês,
+    Trimestre,
+    Semestre,
+    Ano,
+    Valor
+FROM [lib://p_files/Modulo 13/013 - Tipos de Ligações Inner, Left e Right/Exemplo.xlsx]
+(ooxml, embedded labels, table is Vendas);
+
+Left join(Transacoes)
+LOAD
+    Vendedor_id,
+    Nome as Nome_Vendedor
+FROM [lib://p_files/Modulo 13/013 - Tipos de Ligações Inner, Left e Right/Exemplo.xlsx]
+(ooxml, embedded labels, table is [Vendedores (2)]);
+// resultado do left join: uma unica tabela, incluiu nome vendedor na tabela grande 
+
+Transacoes: 
+LOAD
+    Cliente,
+    Agrupamento,
+    Setor,
+    Parcelamento,
+    Vendedor_id,
+    Data,
+    Dia,
+    Mês,
+    Trimestre,
+    Semestre,
+    Ano,
+    Valor
+FROM [lib://p_files/Modulo 13/013 - Tipos de Ligações Inner, Left e Right/Exemplo.xlsx]
+(ooxml, embedded labels, table is Vendas);
+
+Right join(Transacoes)
+LOAD
+    Vendedor_id,
+    Nome as Nome_Vendedor
+FROM [lib://p_files/Modulo 13/013 - Tipos de Ligações Inner, Left e Right/Exemplo.xlsx]
+(ooxml, embedded labels, table is [Vendedores (2)]);
+// tudo da tabela de transações que não tem na de vendedor é apagado
