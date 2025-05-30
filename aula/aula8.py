@@ -58,7 +58,12 @@ resultado = subtracao(5,1)
 print(resultado)
 
 def divisao(x,y):
-    return x/y
+    if y>0:
+        resultado = x/y
+        print(resultado)
+    else:
+        print("não é possível dividir por 0")
+# nao pode digitar 0 
 
 resultadodivisao = divisao(6,2)
 print(resultado)
