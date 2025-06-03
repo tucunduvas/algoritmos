@@ -20,9 +20,7 @@ def somar(x,y):
 x = somar(50,60)
 print(x)
 
-#quando uma funcao só tem print dentro é um procedure 
-# é uma funcao quando tem return 
-#a funcao para quando chega no return 
+
 def potencia(x,y):
     print(x**y)
     
@@ -36,6 +34,7 @@ def func2(x):
     r = []
     for i in func3(x, x*2,  x*3): 
         r.append(i**0.5)
+    return r
         
 def func3(a,b,c):
     lista = [x**2 for x in [a,b,c] if x%3 == 0]
@@ -45,9 +44,6 @@ print(func1(2,3))
 
 
 
-#LOOP DE REPETICAO 
-
-# RECURSIVIDADE 
 
 
 

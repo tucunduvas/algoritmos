@@ -1,13 +1,18 @@
 alunos = []
 
-
 def cadastrar_aluno():
-    #ler todos os dados do aluno em dicionario
-    # cpf: , nome: , endereco: , data_nasc, +1
-    aluno = {cpf: '123', nome: 'beto', ende: 'rua', data_nasc: '22/11', nivel_escolaridade :'medio'  }
-    #dentro de endereco outro dicionario
-    # 
-    alunos.append(alunos)
+    aluno = {
+        'cpf': input("CPF do aluno: "),
+        'nome': input("Nome: "),
+        'endereço': {
+            'rua': input("Rua: "),
+            'bairro': input("Bairro: "),
+            'cep': input("CEP: ")
+        },
+        'data_nasc': input("Data de nascimento (dd/mm): ")
+    }
+    alunos.append(aluno)
     
-def listar_professores(professores):
-    print(professores)    
+def buscar_aluno(cpf):
+    return next((a for a in alunos if a['cpf'] == cpf), None)
+
