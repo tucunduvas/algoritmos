@@ -1,7 +1,8 @@
 alunos = []
-
+qntd = len(alunos)
 def cadastrar_aluno():
     aluno = {
+
         'cpf': input("CPF do aluno: "),
         'nome': input("Nome: "),
         'endereço': {

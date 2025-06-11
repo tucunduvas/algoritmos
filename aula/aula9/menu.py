@@ -14,6 +14,7 @@ def menu_principal():
     print("0 - sair ")
     op = ler_opcao(4)
     
+    
     if op == 1:
         menu_cadastro()
     elif op == 2:
@@ -63,5 +64,6 @@ def ler_opcao(lim_sup):
     print("Opção inválida.")
     input("Pressione ENTER para continuar...")
     return -1
+
 
     
