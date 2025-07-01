@@ -54,8 +54,9 @@ saudacao(a= 'Gabi',b= 18, c='Castilho')
 # aplicar filtros, como min=10, max=50.
 
 def lista_filtro(*args, **kwargs):
-    lista = list(kwargs.values())
-    return list(filter(lambda x: x if lista[1]>x>lista[0] else "", args))
+    minimo = kwargs.get('min')
+    maximo = kwargs.get('max')
+    return list(filter(lambda x: x if maximo>x>minimo else "", args))
     
 print(lista_filtro(1,2,3,4,5,6,7,8,9,10, min=2, max=8))
 
